@@ -124,6 +124,9 @@ databaseFilePath="$MAGENTO_ROOT/*.sql"
 magerun --skip-root-check --root-dir="$MAGENTO_ROOT" db:import $databaseFilePath
 rm $databaseFilePath
 
+echo "Disabling form-key validation on admin. !!! NOT FOR PRODUCTION !!!"
+magerun --skip-root-check --root-dir="$MAGENTO_ROOT" db:query "update core_config_data set value = '0' where path = 'admin/security/use_form_key';"
+
 echo "Installing Sample Data: Reindex"
 magerun --skip-root-check --root-dir="$MAGENTO_ROOT" cache:clean
 magerun --skip-root-check --root-dir="$MAGENTO_ROOT" index:reindex:all
