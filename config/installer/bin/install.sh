@@ -113,7 +113,7 @@ cp -v /etc/fpc.xml /var/www/html/web/app/etc/fpc.xml
 chgrp -R 33 $MAGENTO_ROOT/app/etc
 
 echo "Installing Sample Data: Media"
-curl -s -L https://raw.githubusercontent.com/Vinai/compressed-magento-sample-data/1.9.1.0/compressed-no-mp3-magento-sample-data-1.9.1.0.tgz | tar xz -C /tmp
+curl -s -L https://download.inxmail.de/integrations/magento1/sampledata/magento-sample-data-1.9.2.4-2016-10-11-07-38-13.tar.gz | tar xz -C /tmp
 cp -av /tmp/magento-sample-data-*/* $MAGENTO_ROOT
 rm -rf /tmp/magento-sample-data-*
 chgrp -R 33 $MAGENTO_ROOT
