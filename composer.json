@@ -4,6 +4,7 @@
   "license": "BSD-3-Clause",
   "homepage": "https://github.com/andreaskoch/dockerized-magento",
   "require": {
+    "inxmail/magento-module": "dev-master",
     "avstudnitz/scopehint": "^0.6",
     "tim-reynolds/magento-qconfig": "1.0",
     "aoepeople/aoe_scheduler": "^1",
